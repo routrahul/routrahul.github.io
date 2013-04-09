@@ -7,3 +7,8 @@ line.link {
   stroke: #999;
   stroke-opacity: .6;
 }
+
+#chart {
+	border-width: 1px;
+	border-radius: 2px;
+}
