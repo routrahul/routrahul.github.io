@@ -1,14 +1,4 @@
-var connect = require('connect')
-  , http = require('http')
-  , app
-  ;
-
-app = connect()
-  .use(connect.static('app'))
-  .use('/node_modules', connect.static('node_modules'))
-  .use('/build', connect.static('build'))
-  ;
-
-http.createServer(app).listen(8080, function() {
-  console.log('Running on http://localhost:8080');
-});
+var connect = require('connect');
+connect.createServer(
+    connect.static(__dirname)
+).listen(8090);

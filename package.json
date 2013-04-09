@@ -1,8 +1,8 @@
 {
-  "name": "Rahul's page"
+  "name": "Rahul_page"
 , "version": "0.0.1"
 , "private": false
 , "dependencies": {
-  , "connect": "latest"
+  "connect": "latest"
   }
 }
