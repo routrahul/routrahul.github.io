@@ -63,5 +63,13 @@ function initializePlot()
 		y = d3.scale.linear().domain(
 				[ -newMinCeilY, newMaxCeilY ]).range(
 				[ h, 0 ]);
+
+		var chart = d3.select('#svgdiv').append(
+				'svg:svg').attr('id', 'svg').attr(
+				'width', w + p * 2).attr('height',
+				h + p * 2);
+
+		vis = chart.append('svg:g').attr('transform',
+				'translate(' + p + ',' + p + ')');		
 	});
 }
