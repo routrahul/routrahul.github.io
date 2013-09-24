@@ -56,7 +56,7 @@ var d3Graphs = {
         $("#hudHeader, #hudButtons").show();
 //        $("#history").show();
 //        $("#graphIcon").show();
-//        $("#importExportBtns").show();
+        $("#importExportBtns").show();
         $("#graphIcon").click(d3Graphs.graphIconClick);
         $("#history .close").click(d3Graphs.closeHistogram);
         $("#history ul li").click(d3Graphs.clickTimeline);

@@ -430,7 +430,7 @@ Bar graph on left
 #importExportBtns {
     width:                  298px;
     position:               absolute;
-    bottom:                 0px;
+    bottom:                 78%;
     color:                  white;
     display:                none;
 }
