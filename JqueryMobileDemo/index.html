@@ -1,163 +1,104 @@
-<html lang="en" class="ui-mobile">
+<!DOCTYPE html>
+<html>
 <head>
-<meta class="meta_disable_zoom" name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>Jquery Mobile Demo</title>
-<script type="text/javascript">
-/*				
-				(function(loc) {
-						if (loc.hash == '') {return;}
-						var uri_re = /^(?:(?:[^:\/?#]+):)?(?:\/\/(?:[^\/?#]*))?([^?#]*)(?:\?([^#]*))?(?:#(.*))?/, target_domain = '';
-						loc.href.replace(uri_re, function(all, path, query, frag)
-							{
-								if (path.substr(1, 4) != 'help' && (path.substr(1,6) != 'master' || path.substr(1, 14) == 'master/content'))
-								{
-									var dst, src;
-									dst = src = path + (query ? '?' + query : '');
-									if (frag) { dst = frag.replace(/^\/+/, '/').replace(/\:/g, '/'); }
-									dst = "" + dst;
-									if (dst.charAt(0) != '/') dst = '/' + dst;
-									if (/[0-9]/.test(dst.charAt(1))) dst = '/files' + dst;
-									if (dst != src || loc.hash) { window.location.replace(target_domain + dst); }
-								}
-							});
-					})(window.location);
-					*/
-				</script>
-<link rel="stylesheet" href="style.css" media="screen">
-<script type="text/javascript" src="jquery-mobile.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+<style>
+ul{
+                list-style-type:none;
+}
+ul li{
+                display:block;
+                margin-top:20px;
+                border-radius: 0 !important;
+}
+label{
+                width:100% !important;
+}
+select{
+                height:100% !important;
+                width:100% !important;
+}
+#navBar h1{
+                margin:0;
+}
+#navBar{
+                position:relative;
+}
+#navBar #myStartup{
+                position: absolute;
+                top:20%;
+                left:5%;
+                font-size:18px;
+                float:left;
+                margin:0;
+                padding:0 0 0 70px;
+                overflow:hidden;
+}
+#navBar img{
+                float:left;
+}
+#logo{
+                display:block;
+                background: url(image.png) no-repeat;
+}
+</style>
+
+
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 </head>
-<body class="">
-<div id="body_container" class="ui-mobile-viewport ui-overlay-c">
-	<div data-role="page" id="home" data-url="home" tabindex="0" class="ui-page ui-body-c ui-page-active" style="min-height: 774px;">
-				<div data-role="header" data-backbtn="false" class="ui-header ui-bar-a" role="banner">
-			<div class="navbar">
-				<div class="logo_center"><h1 class="ui-hidden-accessible">Mobile Demo</h1></div>
-			</div>
-		</div>
-
-				
-		
-				
-															<img class="home_initial_header_img" src="image.png" alt="">
-			
-			<div class="home_tagline">Social Sharing.......Hoomans!</div>
-		<!--
-		<div data-role="content" class="ui-content" role="main">
-			<div data-role="collapsible-set" class="home_collapsibles ui-collapsible-set">
-
-								<div data-role="collapsible" data-theme="d" class="mobile_login_container ui-collapsible ui-collapsible-inset ui-collapsible-collapsed"><h2 style="border-top: 1px solid #ccc;" class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-corner-top ui-btn-up-d" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="left" data-theme="d"><span class="ui-btn-inner ui-corner-top"><span class="ui-btn-text"><span class="home_collapsible_logo home_collapsible_login">&nbsp;</span>Log In<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span></span></a></h2><div class="ui-collapsible-content ui-collapsible-content-collapsed" aria-hidden="true">
-					
-					
-				</div></div>
-
-												<div data-role="collapsible" data-theme="d" class="ui-collapsible ui-collapsible-inset ui-collapsible-collapsed"><h2 class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-up-d" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="left" data-theme="d"><span class="ui-btn-inner"><span class="ui-btn-text"><span class="home_collapsible_logo home_collapsible_sign_up">&nbsp;</span>Sign Up<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span></span></a></h2><div class="ui-collapsible-content ui-collapsible-content-collapsed" aria-hidden="true">
-					
-					<div class="sign_up_content">
-						
-						
-					</div>
-					
-					<div class="sign_up_links">
-						<a href="https://m.app.box.com/legal_text/tos" rel="external" target="_blank" class="ui-link">Terms of Service</a>
-					</div>
-				</div></div>
-				
-														<div data-role="collapsible" data-theme="d" class="ui-collapsible ui-collapsible-inset ui-collapsible-collapsed"><h2 class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-up-d" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="left" data-theme="d"><span class="ui-btn-inner"><span class="ui-btn-text"><span class="home_collapsible_logo home_collapsible_apps">&nbsp;</span>
-															Box Mobile App
-													<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span></span></a></h2><div class="ui-collapsible-content ui-collapsible-content-collapsed" aria-hidden="true">
-						
-																			<div class="app_row">
-																<h3><img class="app_logo" src="/img/mobile/apple.png" alt="">Box for iPhone</h3>
-								<p>							Browse files and folders (10 GB free), share files on the go, upload files, and more.
-						 <br>
-								<a href="https://itunes.apple.com/us/app/box-for-iphone-and-ipad/id290853822" target="_blank" rel="external" class="ui-link">Get the iPhone App</a></p>
-							</div>
-							<div class="app_row">
-																<h3><img class="app_logo" src="/img/mobile/android.png" alt="">Box for Android</h3>
-								<p>							Browse files and folders (10 GB free), share files on the go, upload files, and more.
-						 <br>
-								<a href="https://play.google.com/store/apps/details?id=com.box.android" target="_blank" rel="external" class="ui-link">Get the Android App</a></p>
-							</div>
-											</div></div>
-				
-
-														<div data-role="collapsible" data-theme="d" class="ui-collapsible ui-collapsible-inset ui-collapsible-collapsed"><h2 class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-corner-bottom ui-btn-up-d" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="left" data-theme="d"><span class="ui-btn-inner ui-corner-bottom"><span class="ui-btn-text"><span class="home_collapsible_logo home_collapsible_about">&nbsp;</span>About<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span></span></a></h2><div class="ui-collapsible-content ui-collapsible-content-collapsed" aria-hidden="true">
-						
-						<p>Box provides simple, secure sharing from anywhere – letting users easily store files online, send big files fast, access content on their mobile devices, and collaborate with others.</p>
-
-						
-						<h3 class="home_image_rows_header">Case Studies</h3>
-						<div class="home_image_row">
-														<img src="/img/mobile/six_flags.png" alt="">
-							<div class="home_image_row_text">
-								<h4>Six Flags</h4>
-																																									<p>With Box, the Six Flags team can now share large media assets without the hassles of on premise solutions or email. </p>
-							</div>
-						</div>
-					</div></div>
-				
-			</div>
-			
-										<div class="home_initial_top">
-					<h2>Box for Mobile</h2>
-					<ul>
-						<li class="home_browse_row">
-							<div>Get 10 GB FREE and browse your files on the go</div>
-						</li>
-						<li class="home_upload_row">
-							<div>Upload files from your device to Box</div>
-						</li>
-						<li class="home_share_row">
-							<div>Share your files with anyone from anywhere</div>
-						</li>
-					</ul>
-				</div>
-			
-		</div>
-		-->
-<!--
-		<div class="footer ui-footer ui-bar-c" data-role="footer" data-theme="c" role="contentinfo">
-			<div class="ui-grid-a footer_links">
-			<div class="ui-block-a">
-				<a href="https://blog.box.com/" rel="external" target="_blank" class="ui-link">Blog</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="/presentation_desktop" rel="external" class="ui-link">View Full Site</a>
-			</div>
-		</div>
-	
-	<div class="pbl">
-		© 2013 Box, Inc.
-					<span class="mhs">·</span>
-			<a href="https://app.box.com/help/" rel="external" target="_blank" class="ui-link">Support:</a>
-			<span>1-877-729-4269</span>
-			<span class="mhs">·</span>
-			<a href="https://app.box.com/legal_text/tos" rel="external" target="_blank" class="ui-link">Terms</a>
-			<span class="mhs">·</span>
-			<a href="https://app.box.com/legal_text/privacy_policy" rel="external" target="_blank" class="ui-link">Privacy Policy</a>
-			</div>
-</div>	</div>
-<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span><h1>loading</h1></div></div>
-
--->
+<body>
+<div data-role="page">
+   <div data-role="header">
+    <div data-role="navbar" id="navBar">
+      <ul>
+                                <li>MY STARTUP</li>
+        <li><a href="#" data-role="home">Home</a></li>
+        <li><a href="#" data-icon="">About Us</a></li>
+        <li>
+                                                <div data-role="">
+                                                                <select>
+                                                                                <option>Products</option>
+                                                                                <option>Webapps</option>
+                                                                                <option>Mobile Apps</option>
+                                                                </select>
+                                                </div>
+                                </li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+                <h1>Lorem Ipsum</h1>
+                <h2>Lorem Ipsum</h2>
+                <p>lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum </p>
+                <form method="post" action="demoform.asp">
+                  <div data-role="fieldcontain">
+                  <ul>
+                                <li><label for="fname">First name:</label><input type="text" name="fname" id="fname"></li> 
+                                <li><label for="fname">First name:</label><input type="text" name="fname" id="fname"></li>
+                                <li>         
+                                                <label class="ui-input-text">Country:</label>
+                                                <select>
+                                                                <option value="standard">India</option>
+                                                                <option value="rush">Pakistan</option>
+                                                                <option value="express">New Zealand</option>
+                                                </select>
+                                </li>                                       
+                  </ul>                                   
+                  </div>
+                  <input type="submit" data-inline="true" value="Submit" />
+                </form>
+  </div>
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div> 
+</div>
+</body>
 <script>
-/*
-(function() {
-	var config = {
-
-		debug: 0
-	};
-
-
-	$.extend(config, null);
-
-
-	if (window.Box && Box.Application) {
-		Box.Application.init(config);
-	}
-}())
-
-			$(function() {
-				FastClick.attach(document.body);
-			});*/
-			</script></body></html>
+	$( document ).ready(function() {
+		var obj = jQuery.parseJSON( '{"general":{"logo":"assets/images/logo.png","name":"Company Name"},"navigation":[{"title":"Home","link":"index.html"},{"title":"Products","link":"product.html","subnav":[{"title":"Webapps","link":"webapps"},{"title":"Mobile Apps","link":"mobile-apps"}]}],"modules":[{"type":"navigation","container":"#header","title":"Top Navigation","attributes":{"class":"topNavigation","id":"topNavigation"}},{"type":"content","title":"Hi Welcome to mobile development","subtitle":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","container":"#maincontent","attributes":{"class":"topContent"}},{"type":"form","title":"Registration Form","action":"submit.aspx","name":"registrationform","container":"#maincontent","attributes":{"class":"registrationform"},"fields":[{"id":"firstname","label":"First Name","name":"fname","type":"text","value":""},{"id":"email","label":"Email","name":"email","type":"text","value":""},{"id":"countries","label":"Country","name":"countries","type":"select","options":[{"value":"","text":"Select Country"},{"value":"in","text":"India","selected":"true"},{"value":"us","text":"United Stated"},{"value":"uk","text":"United Kingdom"},{"value":"cn","text":"Canada"}]},{"id":"submit","name":"submit","type":"submit","value":"Submit"}],"rules":{"fname":"required","email":{"required":"true","email":"true"}},"messages":{"fname":"Enter your firstname","email":{"required":"Please enter a valid email address","minlength":"Please enter a valid email address"}}}]}' );
+		alert( obj);
+	});
+</script>
+</html>

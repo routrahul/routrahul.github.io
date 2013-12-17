@@ -1,0 +1,121 @@
+{
+   "general":{
+      "logo":"assets/images/logo.png",
+      "name":"Company Name"
+   },
+   "navigation":[
+      {
+         "title":"Home",
+         "link":"index.html"
+      },
+      {
+         "title":"Products",
+         "link":"product.html",
+         "subnav":[
+            {
+               "title":"Webapps",
+               "link":"webapps"
+            },
+            {
+               "title":"Mobile Apps",
+               "link":"mobile-apps"
+            }
+         ]
+      }
+   ],
+   "modules":[
+      {
+         "type":"navigation",
+         "container":"#header",
+         "title":"Top Navigation",
+         "attributes":{
+            "class":"topNavigation",
+            "id":"topNavigation"
+         }
+      },
+      {
+         "type":"content",
+         "title":"Hi Welcome to mobile development",
+         "subtitle":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+         "container":"#maincontent",
+         "attributes":{
+            "class":"topContent"
+         }
+      },
+      {
+         "type":"form",
+         "title":"Registration Form",
+         "action":"submit.aspx",
+         "name":"registrationform",
+         "container":"#maincontent",
+         "attributes":{
+            "class":"registrationform"
+         },
+         "fields":[
+            {
+               "id":"firstname",
+               "label":"First Name",
+               "name":"fname",
+               "type":"text",
+               "value":""
+            },
+            {
+               "id":"email",
+               "label":"Email",
+               "name":"email",
+               "type":"text",
+               "value":""
+            },
+            {
+               "id":"countries",
+               "label":"Country",
+               "name":"countries",
+               "type":"select",
+               "options":[
+                  {
+                     "value":"",
+                     "text":"Select Country"
+                  },
+                  {
+                     "value":"in",
+                     "text":"India",
+                     "selected":"true"
+                  },
+                  {
+                     "value":"us",
+                     "text":"United Stated"
+                  },
+                  {
+                     "value":"uk",
+                     "text":"United Kingdom"
+                  },
+                  {
+                     "value":"cn",
+                     "text":"Canada"
+                  }
+               ]
+            },
+            {
+               "id":"submit",
+               "name":"submit",
+               "type":"submit",
+               "value":"Submit"
+            }
+         ],
+         "rules":{
+            "fname":"required",
+            "email":{
+               "required":"true",
+               "email":"true"
+            }
+         },
+         "messages":{
+            "fname":"Enter your firstname",
+            "email":{
+               "required":"Please enter a valid email address",
+               "minlength":"Please enter a valid email address"
+            }
+         }
+      }
+   ]
+}
