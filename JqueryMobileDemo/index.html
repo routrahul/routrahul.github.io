@@ -37,38 +37,55 @@ select{
 #navBar img{
                 float:left;
 }
-#logo{
+.startupLogo{
+                                background: url(image.png) no-repeat;
+                                padding-left:10%;
+                                padding-top:1%;
+}
+#navBar ul li:last-child *{
+                border-radius:0 !important;
+                height:56px;
+}
+#navBar{
+                height:56px;
+                overflow:hidden;
+}
+#navBar li:first-child{
                 display:block;
-                background: url(image.png) no-repeat;
+                min-width:20%;
 }
 </style>
 
 
+
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
 </head>
 <body>
 <div data-role="page">
    <div data-role="header">
-    <div data-role="navbar" id="navBar">
-      <ul>
-                                <li>MY STARTUP</li>
+    <div data-role="navbar" id="header">
+		<!--
+      <ul id="header">
+        <li>MY STARTUP</li>
         <li><a href="#" data-role="home">Home</a></li>
         <li><a href="#" data-icon="">About Us</a></li>
         <li>
-                                                <div data-role="">
-                                                                <select>
-                                                                                <option>Products</option>
-                                                                                <option>Webapps</option>
-                                                                                <option>Mobile Apps</option>
-                                                                </select>
-                                                </div>
-                                </li>
+			<div data-role="">
+				<select>
+					<option>Products</option>
+					<option>Webapps</option>
+					<option>Mobile Apps</option>
+				</select>
+			</div>
+        </li>
       </ul>
+	  -->
     </div>
   </div>
-  <div data-role="content">
-                <h1>Lorem Ipsum</h1>
+  
+  <div data-role="content" id="maincontent">
+      <!--          <h1>Lorem Ipsum</h1>
                 <h2>Lorem Ipsum</h2>
                 <p>lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum lorem ipsum dolor ipsum </p>
                 <form method="post" action="demoform.asp">
@@ -88,17 +105,25 @@ select{
                   </div>
                   <input type="submit" data-inline="true" value="Submit" />
                 </form>
+				-->
   </div>
+ 
   <div data-role="footer">
     <h1>Footer Text</h1>
   </div>
 </div> 
 </div>
 </body>
+<script src="custom.js"></script>
 <script>
 	$( document ).ready(function() {
+		
 		var obj = jQuery.parseJSON( '{"general":{"logo":"assets/images/logo.png","name":"Company Name"},"navigation":[{"title":"Home","link":"index.html"},{"title":"Products","link":"product.html","subnav":[{"title":"Webapps","link":"webapps"},{"title":"Mobile Apps","link":"mobile-apps"}]}],"modules":[{"type":"navigation","container":"#header","title":"Top Navigation","attributes":{"class":"topNavigation","id":"topNavigation"}},{"type":"content","title":"Hi Welcome to mobile development","subtitle":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","container":"#maincontent","attributes":{"class":"topContent"}},{"type":"form","title":"Registration Form","action":"submit.aspx","name":"registrationform","container":"#maincontent","attributes":{"class":"registrationform"},"fields":[{"id":"firstname","label":"First Name","name":"fname","type":"text","value":""},{"id":"email","label":"Email","name":"email","type":"text","value":""},{"id":"countries","label":"Country","name":"countries","type":"select","options":[{"value":"","text":"Select Country"},{"value":"in","text":"India","selected":"true"},{"value":"us","text":"United Stated"},{"value":"uk","text":"United Kingdom"},{"value":"cn","text":"Canada"}]},{"id":"submit","name":"submit","type":"submit","value":"Submit"}],"rules":{"fname":"required","email":{"required":"true","email":"true"}},"messages":{"fname":"Enter your firstname","email":{"required":"Please enter a valid email address","minlength":"Please enter a valid email address"}}}]}' );
-		alert( obj);
+		var idOfNavigationBar = createHeaderModule(obj.modules[0]);
+		createHeaderContent(idOfNavigationBar,obj.navigation);
+		createContentPlaceHolder(obj.modules[1]);
+		createContentForm(obj.modules[2]);
 	});
 </script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 </html>
