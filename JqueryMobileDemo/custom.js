@@ -4,6 +4,11 @@ function createHeaderModule(obj)
 	return obj.attributes.id;
 }
 
+function createGeneralHeader(id,obj)
+{
+	$('#'+id).append('<li><img border=\"0\" src=\"'+obj.logo+'\" alt="logo"/><h3>'+obj.name+'</h3></li>');
+}
+
 function createHeaderContent(id,obj)
 {
 	for(var i in obj)
