@@ -13,7 +13,7 @@ function initializeGridster()
 		resize : {
 			enabled : true,
 			stop : function(e, ui, $widget) {
-				chartObject[$($($widget).children()[0]).attr("id")].obj.update();
+				chartObject[$($($widget).children()[2]).attr("id")].obj.update();
 			}
 		}
 	}).data('gridster');
