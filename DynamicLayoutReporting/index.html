@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dynamic Layout Reporting</title>
+<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+<link href="css/gridster/jquery.gridster.min.css" rel="stylesheet">
+<link href="css/gridster/demo.css" rel="stylesheet">
+<link href="css/nvd3/nv.d3.css" rel="stylesheet">
+<link href="css/custom/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="main col-md-12 col-sm-12" id="containerDiv">
+				<div class="gridster">
+					<ul>
+						<li data-row="1" data-col="1" data-sizex="5" data-sizey="5">
+							<span id="dropdownMenu1" class="glyphicon glyphicon-list dropdown-toggle" data-toggle="dropdown"></span>
+							<ol class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<div data-chartType="bar" data-ChartContainer="barChartContainer" onclick="changeChartType(this);">Bar Chart</div>
+							    <div data-chartType="line" data-ChartContainer="barChartContainer" onclick="changeChartType(this);">Line Chart</div>
+							    <div data-chartType="area" data-ChartContainer="barChartContainer" onclick="changeChartType(this);">Area Chart</div>
+							    <div data-chartType="scatter" data-ChartContainer="barChartContainer" onclick="changeChartType(this);">Scatter Chart</div>
+						  	</ol>
+							<div id="barChartContainer" class="chartContainer"><svg></svg></div>
+						</li>
+						<li data-row="1" data-col="2" data-sizex="5" data-sizey="5">
+							<span id="dropdownMenu1" class="glyphicon glyphicon-list dropdown-toggle" data-toggle="dropdown"></span>
+							<ol class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<div data-chartType="bar" data-ChartContainer="lineChartContainer" onclick="changeChartType(this);">Bar Chart</div>
+							    <div data-chartType="line" data-ChartContainer="lineChartContainer" onclick="changeChartType(this);">Line Chart</div>
+							    <div data-chartType="area" data-ChartContainer="lineChartContainer" onclick="changeChartType(this);">Area Chart</div>
+							    <div data-chartType="scatter" data-ChartContainer="lineChartContainer" onclick="changeChartType(this);">Scatter Chart</div>
+						  	</ol>
+							<div id="lineChartContainer" class="chartContainer"><svg></svg></div>
+						</li>
+						<li data-row="2" data-col="1" data-sizex="5" data-sizey="5">
+							<span id="dropdownMenu1" class="glyphicon glyphicon-list dropdown-toggle" data-toggle="dropdown"></span>
+							<ol class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<div data-chartType="bar" data-ChartContainer="scatterChartContainer" onclick="changeChartType(this);">Bar Chart</div>
+							    <div data-chartType="line" data-ChartContainer="scatterChartContainer" onclick="changeChartType(this);">Line Chart</div>
+							    <div data-chartType="area" data-ChartContainer="scatterChartContainer" onclick="changeChartType(this);">Area Chart</div>
+							    <div data-chartType="scatter" data-ChartContainer="scatterChartContainer" onclick="changeChartType(this);">Scatter Chart</div>
+						  	</ol>
+							<div id="scatterChartContainer" class="chartContainer"><svg></svg></div>
+						</li>
+						<li data-row="2" data-col="2" data-sizex="5" data-sizey="5">
+							<span id="dropdownMenu1" class="glyphicon glyphicon-list dropdown-toggle" data-toggle="dropdown"></span>
+							<ol class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<div data-chartType="bar" data-ChartContainer="areaChartContainer" onclick="changeChartType(this);">Bar Chart</div>
+							    <div data-chartType="line" data-ChartContainer="areaChartContainer" onclick="changeChartType(this);">Line Chart</div>
+							    <div data-chartType="area" data-ChartContainer="areaChartContainer" onclick="changeChartType(this);">Area Chart</div>
+							    <div data-chartType="scatter" data-ChartContainer="areaChartContainer" onclick="changeChartType(this);">Scatter Chart</div>
+						  	</ol>
+							<div id="areaChartContainer" class="chartContainer"><svg></svg></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+<script src="js/jquery/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap/bootstrap.js"></script>
+<script src="js/gridster/jquery.gridster.js"></script>
+<script src="js/nvd3/d3.v3.js"></script>
+<script src="js/nvd3/nv.d3.js"></script>
+<script src="js/nvd3/stream_layers.js"></script>
+<script src="js/custom/custom.js"></script>
+<script src="js/custom/chartCreation.js"></script>
+</html>

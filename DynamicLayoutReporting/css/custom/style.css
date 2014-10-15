@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+.gridster .gs-w {
+	background: transparent !important;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.gridster ul li div.chartContainer{
+	width: 100%;
+	height: 100%;
+}
+
+span.glyphicon.glyphicon-list {
+	font-size: 14px;
+	position: absolute;
+	left: 5px;
+	top: 6px;
+}
+
+.gridster ul li .dropdown-menu{
+	top: 7%;
+}
