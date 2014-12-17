@@ -1,0 +1,183 @@
+
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+body {
+  color: #fff;
+  text-align: center;
+}
+
+.pitchContainer{
+	position: relative;
+}
+
+.player{
+	width:25px;
+	height:25px;
+	background-color: white;
+	border-radius: 50%;
+	position: absolute;
+}
+
+.player1{
+	top: 25%;
+	left: 18%;
+}
+
+.player2 {
+	top: 25%;
+	left: 36%;
+}
+
+.player3 {
+	top: 25%;
+	left: 56%;
+}
+
+.player4 {
+	top: 25%;
+	left: 76%;
+}
+
+.player5{
+	top: 55%;
+	left: 18%;
+}
+
+.player6 {
+	top: 55%;
+	left: 36%;
+}
+
+.player7 {
+	top: 55%;
+	left: 56%;
+}
+
+.player8 {
+	top: 55%;
+	left: 76%;
+}
+
+.player9 {
+	top: 75%;
+	left: 37%;
+}
+
+.player10 {
+	top: 75%;
+	left: 60%;
+}
+
+.player11 {
+	top: 5%;
+	left: 49%;
+}
+
+.player12 {
+	top: 45%;
+	left: 93%;
+}
+
+.player13 {
+	top: 50%;
+	left: 93%;
+}
+
+.player14 {
+	top: 55%;
+	left: 93%;
+}
+
+.player15 {
+	top: 60%;
+	left: 93%;
+}
+
+.player16 {
+	top: 65%;
+	left: 93%;
+}
+
+.hiddenPlayer{
+	display: none;
+}
+
+div#triDiv {
+	height: 10px;
+	width: 10px;
+	visibility: hidden; 
+	position: absolute;
+	z-index: 9999999;
+	color: #333;
+	border-color: #BBBBBB;
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #FAFAFA 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #FAFAFA 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #FAFAFA 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #FAFAFA));
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #FAFAFA 100%);
+	background-image: linear-gradient(to bottom, #FFFFFF 0%, #FAFAFA 100%);
+	-webkit-transform: rotate(43deg);
+	-moz-transform: rotate(43deg);
+	-o-transform: rotate(43deg);
+	transform: rotate(43deg);
+	border-left: 1px solid #BBBBBB;
+	border-top: 1px solid #BBBBBB;
+}
+
+div#infoDiv {
+	width: 400px;
+	border-width: 1px;
+	visibility: hidden; 
+	position: absolute;
+	z-index: 9999998;
+	line-height: 16px;
+	border-width: 1px;
+	color: #333;
+	border-color: #BBBBBB;
+	box-shadow: 0 1px 4px #AAAAAA;
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #FAFAFA 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #FAFAFA 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #FAFAFA 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #FAFAFA));
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #FAFAFA 100%);
+	background-image: linear-gradient(to bottom, #FFFFFF 0%, #FAFAFA 100%);
+	}
+	* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#infoDiv .table-responsive{
+	height:300px;
+	overflow: auto;
+}
+
+.selected{
+	background-color: #8a8aff;
+}
+
+.selectedPlayer{
+	background-color: yellow;
+}
+
+.selectedPlayersList table {
+	text-align: left;
+}
+
+#infoDiv table {
+	text-align: left;
+}
+
+.alert.alert-success {
+	width: 40%;
+	position: fixed;
+	top: 40%;
+	left: 30%;
+	min-height: 15%;
+	display: none;
+}
