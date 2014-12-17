@@ -86,7 +86,7 @@ function closeDivs(){
 function generatePlayerList()
 {
 	$.ajax({
-		url:"data/players.json",
+		url:"../data/players.json",
 		asyn:true,
 		cache:false,
 		success:function(data){
