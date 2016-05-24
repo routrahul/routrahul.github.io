@@ -1,0 +1,66 @@
+<div class="container bootcards-container" id="main">
+  <div class="row">
+  	<div class="col-md-5 col-sm-5 bootcards-list" id="list" data-title="Notes">
+  		<div class="panel panel-default">
+        <div class="panel-heading clearfix">
+          <h3 class="panel-title pull-left">Alerts</h3>
+        </div>
+        <div class="list-group">
+          <a class="list-group-item pjax" href="" ng-repeat="item in selectedAlert.alert"
+          ng-class="{active : item.selected == true}" ng-click="selectAlert(item)" ng-show="item.active == true">
+						<i class="fa fa-2x pull-left {{item.icon}}"></i>
+						<h4 class="list-group-item-heading">{{item.header}}</h4>
+						<p class="list-group-item-text">{{item.date}}
+						</p>
+					</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7 col-sm-7 bootcards-cards" id="listDetails">
+      <div class="col-md-12">
+  			<div id="activityCard">
+  				<div class="panel panel-default">
+  					<div class="panel-heading clearfix">
+  						<h3 class="panel-title pull-left">Action</h3>
+              <a class="btn btn-primary pull-right hidden-xs" href="" ng-click="storeSelectedAction()">
+  							<i class="fa fa-check"></i>
+  							<span>Done</span>
+  					  </a>
+            </div>
+
+            <div class="list-group">
+  						<div class="list-group-item" ng-repeat="item in selectedAction">
+  							<label>{{item.subtext}}</label>
+                <i class="fa fa-star" ng-show="item.recomended == true" style="color:#FFD700;opacity:1;"></i>
+  							<h4 class="list-group-item-heading" style="width:65%;">{{item.text}}</h4>
+                <a class="btn btn-default pull-right" href="" style="margin-top:-40px;" ng-click="captureSelectedAction(item)">
+                  <i class="fa fa-check"></i>
+                  Select
+                </a>
+  						</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12" ng-show="showSimilar">
+        <div>
+  				<div class="panel panel-default">
+  					<div class="panel-heading clearfix">
+  						<h3 class="panel-title pull-left">Similar Actions Taken</h3>
+            </div>
+            <div class="list-group">
+  						<div class="list-group-item">
+  							<label>{{similarAlertsObjectScope.subtext}}</label>
+  							<h4 class="list-group-item-heading" style="width:65%;">{{similarAlertsObjectScope.text}}</h4>
+                <a class="btn btn-default pull-right" href="" style="margin-top:-40px;" ng-click="captureSelectedAction(item)">
+                  <i class="fa fa-check"></i>
+                  Select
+                </a>
+  						</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

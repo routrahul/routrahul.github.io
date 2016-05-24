@@ -1,0 +1,14 @@
+.dropdown {
+    margin: 10px;
+}
+
+.list-group-item i {
+    opacity: .3;
+    text-align: center;
+    width: inherit;
+    margin-right: 5px;
+}
+
+h4.panel-title.pull-left.ng-binding,h3.panel-title.pull-left.ng-binding {
+    width: 70%;
+}

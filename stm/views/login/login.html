@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="bootcard-cards" ng-show="showLogin">
+    <div class="col-sm-6 col-md-offset-3">
+      <div class="panel panel-default bootcards-summary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Login</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12">
+              <div class="col-md-12 col-xs-12">
+                <input type="text" id="inputUserName" class="form-control" placeholder="User Name" style="margin: 0 0 10px 0;">
+              </div>
+              <div class="col-md-12 col-xs-12">
+                <input type="password" id="password" class="form-control" placeholder="Password">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12">
+              <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="loginFunction()">Sign in</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bootcard-cards" ng-show="showDeptSelection">
+    <div class="col-sm-6 col-md-offset-3">
+      <div class="panel panel-default bootcards-summary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Select Store & Department</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12">
+              <div class="col-md-12 col-xs-12">
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle form-control" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    {{selectedStore}}
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li ng-repeat="store in stores" ng-click="selectStore(store)"><a href="">{{store.name}}</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-12 col-xs-12">
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle form-control" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    {{selectedDepartment}}
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li ng-repeat="dept in departments" ng-click="selectDepartment(dept)"><a href="">{{dept.name}}</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12">
+                <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="gotoLanding()">Go</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

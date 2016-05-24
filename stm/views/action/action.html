@@ -1,0 +1,31 @@
+<div class="col-md-7 col-sm-12 bootcards-cards col-md-offset-2" id="listDetails">
+  <div id="activityCard">
+  	<div class="panel panel-default">
+  		<div class="panel-heading clearfix">
+  			<h3 class="panel-title pull-left">{{selectedAction.header}}</h3>
+  			<!--small screen component-->
+  			<div class="btn-group pull-right visible-xs">
+  					<a class="btn btn-primary" ng-click="actionTaken()">
+    					<i class="fa fa-pencil"></i>
+    					<span>Done</span>
+    				</a>
+  			</div>
+  			<!--big screen component-->
+  				<a class="btn btn-primary pull-right hidden-xs" href="/notes/ucw9gtbjq7ls/edit" data-toggle="modal" data-target="#editModal">
+  					<i class="fa fa-pencil"></i>
+  					<span>Done</span>
+  			  </a>
+  		</div>
+  		<div class="list-group">
+  			<div class="list-group-item" ng-repeat="item in selectedAction.actions">
+  				<label>{{item.subtext}}</label>
+  				<h4 class="list-group-item-heading" style="width:65%;">{{item.text}}</h4>
+          <a class="btn btn-default pull-right" ng-class="{active: item.selected}" href="" style="margin-top:-40px;" ng-model="item.selected">
+            <i class="fa fa-check"></i>
+            Select
+          </a>
+  			</div>
+      </div>
+    </div>
+  </div>
+</div>

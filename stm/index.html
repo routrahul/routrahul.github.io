@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Rahul Rout">
+
+    <title>Store Manager</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/app/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <!-- Custom CSS -->
+    <link href="/app/css/bootcards-desktop.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/app/css/bootcards-demo-app.css" rel="stylesheet">
+    <link href="/app/css/carousel.css" rel="stylesheet">
+    <link href="/app/css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+    </style>
+
+</head>
+
+<body ng-app="storemanager">
+
+  <!-- fixed top navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <a class="navbar-brand no-break-out" title="Customers" href="#/landing">Store Management</a>
+        <!-- <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="/landing" data-pjax="#main" data-title="Customers" <i="" class="fa fa-dashboard">
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="charts.html" data-pjax="#main" data-title="Charts" <i="" class="fa fa-bar-chart-o">
+                Charts
+              </a>
+            </li>
+          </ul>
+        </div> -->
+        <button id="subscribe" type="button" class="btn btn-danger btn-sm pull-right subcribeButton" style="margin-top:10px;" onclick="subscribe()">Danger</button>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container bootcards-container" id="main">
+
+        <div ng-view></div>
+
+    </div>
+
+
+    <!-- /.container -->
+
+
+
+    <script src="/app/js/angular.min.js"></script>
+    <script src="/app/js/angular-route.min.js"></script>
+
+    <script src="/app/views/landing/landing.js"></script>
+    <script src="/app/views/action/action.js"></script>
+    <script src="/app/views/selectedAlert/selectedAlert.js"></script>
+    <script src="/app/views/login/login.js"></script>
+
+    <script src="/app/app.js"></script>
+
+    <script src="/app/js/jquery.js"></script>
+    <script src="/app/js/jquery.ui.js"></script>
+
+    <script src="/app/js/bootstrap.min.js"></script>
+    <script src="/app/js/bootcards.min.js"></script>
+
+    <script src="/app/data/appData.js"></script>
+    <script src="/app/js/main.js"></script>
+
+</body>
+
+</html>

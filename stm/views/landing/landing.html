@@ -1,0 +1,108 @@
+<div class="row">
+
+  <div class="bootcard-cards">
+    <div class="col-sm-6 col-md-offset-3">
+      <div class="panel panel-default bootcards-summary">
+        <div class="panel-heading">
+					<h3 class="panel-title">Critical Alerts</h3>
+				</div>
+        <div class="panel-body">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item" ng-class="{active:item.active}" ng-repeat="item in criticalAlertsObj">
+                    <div class="container">
+                      <div class="carousel-caption">
+                        <h1><i class="fa fa-2x {{item.icon}}"></i></h1>
+                        <!-- <h2>Weather Alert</h2> -->
+                        <p>{{item.header}}</p>
+                        <p><a class="btn btn-lg btn-primary" href="" role="button" ng-click="openSnowModal(item)">Take Action</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<div class="bootcards-cards">
+
+		<div class="col-sm-6 col-md-offset-3 bootcardsContainer">
+
+			<div class="panel panel-default bootcards-summary">
+
+				<div class="panel-heading">
+					<h3 class="panel-title">More Alerts</h3>
+				</div>
+
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-xs-12 col-sm-4 pods" ng-repeat="item in moreAlertsObject" ng-click="moreAlertsSelectedObject(item)">
+							<a class="bootcards-summary-item" href="" data-pjax="#main" data-title="Contacts" style="padding-top:35px;">
+								<i class="fa fa-3x {{item.icon}}"></i>
+								<h4>
+									{{item.text}}
+									<span class="label label-info weatherBadge">{{item.alert.length}}</span>
+								</h4>
+							</a>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="panel-footer">
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+<div class="modal fade" id="snowModal" tabindex="-1" role="dialog" aria-labelledby="editModal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+      <div class="bootcards-cards">
+        <div class="bootcardsModalContainer">
+          <div class="panel panel-default bootcards-summary">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{modalSelectedObject.header}}</h3>
+              <h5 class="panel-title">{{modalSelectedObject.date}}</h3>
+              <a class="btn btn-primary pull-right hidden-xs" href="/notes/ucw9gtbjq7ls/edit" data-toggle="modal" data-target="#editModal"
+               style="margin-top:-33px;">
+								<i class="fa fa-pencil"></i>
+								<span>Done</span>
+						  </a>
+            </div>
+            <div class="list-group" ng-repeat="item in modalSelectedObject.actions">
+							<div class="list-group-item">
+								<label>{{item.subtext}}</label>
+								<h4 class="list-group-item-heading" style="width:65%;">{{item.text}}</h4>
+                <a class="btn btn-default pull-right" ng-class="{active:item.selected}" href="#" style="margin-top:-40px;">
+                  <i class="fa fa-check"></i>
+                  Select
+                </a>
+							</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
