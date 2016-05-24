@@ -48,6 +48,7 @@ function subscribe() {
     subscriptionId = sub.endpoint.split("/")[sub.endpoint.split("/").length - 1]
     subscribeButton.textContent = 'Unsubscribe';
     isSubscribed = true;
+    initiateMessages();
   }).catch(function(ex){
     console.log(ex);
     $(".output").html(ex.toString());
