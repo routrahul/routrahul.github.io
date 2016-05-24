@@ -4,7 +4,7 @@ angular.module('stm.landing', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider
-      .when('/landing', { templateUrl: '/app/views/landing/landing.html', controller: 'LandingCtrl' })
+      .when('/landing', { templateUrl: 'views/landing/landing.html', controller: 'LandingCtrl' })
 }])
 
 

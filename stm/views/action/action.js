@@ -4,7 +4,7 @@ angular.module('stm.action', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider
-      .when('/action', { templateUrl: '/app/views/action/action.html', controller: 'ActionCtrl' })
+      .when('/action', { templateUrl: 'views/action/action.html', controller: 'ActionCtrl' })
 }])
 
 

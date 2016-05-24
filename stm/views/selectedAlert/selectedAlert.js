@@ -4,7 +4,7 @@ angular.module('stm.selectedAlert', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider
-      .when('/selectedAlert', { templateUrl: '/app/views/selectedAlert/selectedAlert.html', controller: 'SelectedAlertCtrl' })
+      .when('/selectedAlert', { templateUrl: 'views/selectedAlert/selectedAlert.html', controller: 'SelectedAlertCtrl' })
 }])
 
 
