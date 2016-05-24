@@ -170,7 +170,7 @@ function initiateMessages(){
       clearInterval(intervalObject);
     }
   },5000);
-})
+}
 
 var similarAlertsObject = {};
 
