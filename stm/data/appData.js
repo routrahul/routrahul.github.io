@@ -1,8 +1,20 @@
 var counter = 0;
 
-// function subscribe(){
-//   console.log("Subscribe Called!");
-// }
+function sendMessage(){
+  console.log("Subscribe Called!");
+  $.ajax({
+        type: "POST",
+        url: "https://android.googleapis.com/gcm/send",
+        beforeSend: function (xhr) {
+                    /* Authorization header */
+                    xhr.setRequestHeader("Authorization", "key=AIzaSyCH44qhsh-Bv26-nAk8WH0Uyp-isoWkWY4");
+                    xhr.setRequestHeader("Content-Type", "application/json");
+                },
+        data: JSON.stringify({
+            registration_ids: [subscriptionId] // eslint-disable-line camelcase
+        })
+      });
+}
 $(function(){
   console.log("Init");
   // setTimeout(function(){
