@@ -22,22 +22,7 @@ function initiateMessages(){
   //     interval: 2000
   //   });
   // },1500);
-
-  var intervalObject = setInterval(function(){
-    $.ajax({
-        type: "POST",
-        url: "https://android.googleapis.com/gcm/send",
-        beforeSend: function (xhr) {
-                    /* Authorization header */
-                    xhr.setRequestHeader("Authorization", "key=AIzaSyCH44qhsh-Bv26-nAk8WH0Uyp-isoWkWY4");
-                    xhr.setRequestHeader("Content-Type", "application/json");
-                },
-        data: JSON.stringify({
-            registration_ids: [subscriptionId] // eslint-disable-line camelcase
-        })
-      });
-
-
+  
     var randomnumber = Math.floor(Math.random() * (2 - 0 + 0)) + 0;
     switch (randomnumber) {
       case 0:
