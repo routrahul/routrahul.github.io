@@ -22,7 +22,9 @@ function initiateMessages(){
   //     interval: 2000
   //   });
   // },1500);
-  
+
+  var intervalObject = setInterval(function(){
+    
     var randomnumber = Math.floor(Math.random() * (2 - 0 + 0)) + 0;
     switch (randomnumber) {
       case 0:
