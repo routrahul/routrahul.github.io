@@ -18,17 +18,16 @@ angular.module('stm.notes', ['ngRoute'])
       $location.path("/landing");
     }
 
-    $scope.speech = function(){
-      if($scope.speechStart)
-      {
-        recognition.stop();
-        $scope.speechStart = false;
-        return;
-      }else{
-        $scope.speechStart = true;
-        recognition.start();
-      }
+    $scope.startSpeech = function(){
+      $scope.speechStart = true;
+      recognition.start();
+    }
 
+    $scope.endSpeech = function(){
+      recognition.stop();
+      $scope.speechStart = false;
+      alert($scope.final_transcript);
+      return;
     }
 
     var recognition = new webkitSpeechRecognition();
@@ -69,7 +68,6 @@ angular.module('stm.notes', ['ngRoute'])
       //alert($scope.final_transcript);
       if($scope.final_transcript)
       {
-        alert($scope.final_transcript);
         $scope.speech();
       }
       $scope.$apply();
