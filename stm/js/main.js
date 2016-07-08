@@ -5,13 +5,13 @@ var subscriptionId;
 var subscribeButton = document.getElementById('subscribe');
 var sendQueryButton = document.getElementById('sendMessage');
 if ('serviceWorker' in navigator) {
-  alert('Service Worker is supported');
+  console.log('Service Worker is supported');
   navigator.serviceWorker.register('sw.js').then(function() {
     return navigator.serviceWorker.ready;
   }).then(function(serviceWorkerRegistration) {
     reg = serviceWorkerRegistration;
     subscribeButton.disabled = false;
-    alert('Service Worker is ready :^)', reg);
+    console.log('Service Worker is ready :^)', reg);
   }).catch(function(error) {
     alert('Service Worker Error :^(', error);
   });
@@ -39,6 +39,7 @@ subscribeButton.addEventListener('click', function() {
 //   });
 // });
 function subscribe() {
+  alert("Subscribe Called");
   reg.pushManager.subscribe({userVisibleOnly: true}).
   then(function(pushSubscription){
     sub = pushSubscription;
