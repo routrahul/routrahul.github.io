@@ -9,7 +9,7 @@ angular.module('storemanager', [
 
 .config(['$routeProvider', function ($routeProvider) {
   $routeProvider
-  .otherwise({redirectTo: '/login'})
+  .otherwise({redirectTo: '/landing'})
 }])
 
 .factory('ActionFactory',[function(){
