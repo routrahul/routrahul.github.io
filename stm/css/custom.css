@@ -73,4 +73,5 @@ span.actionIdentifier.glyphicon.glyphicon-chevron-right.pull-right {
 .navbar .navbar-brand {
   font-weight: 700;
   color: #f5f5f5;
+  margin-left:60px;
 }

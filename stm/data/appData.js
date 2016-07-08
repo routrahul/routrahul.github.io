@@ -37,7 +37,7 @@ function initiateMessages(){
           "id":"weather1",
           "type":"snow",
           "selected":false,
-          "action":[
+          "actions":[
             {
               "id":"snow_action1",
               "subtext":"Action - 1",
@@ -75,7 +75,7 @@ function initiateMessages(){
             "id":"stock1",
             "type":"stockout",
             "selected":false,
-            "action":[
+            "actions":[
               {
                 "id":"prince_cd_stock_out",
                 "subtext":"Action - 1",
@@ -113,7 +113,7 @@ function initiateMessages(){
               "id":"furnace1",
               "type":"furnace",
               "selected":false,
-              "action":[
+              "actions":[
                 {
                   "id":"furnace_maintenance_1",
                   "subtext":"Action - 1",
