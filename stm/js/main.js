@@ -4,6 +4,7 @@ var isSubscribed = false;
 var subscriptionId;
 var subscribeButton = document.getElementById('subscribe');
 var sendQueryButton = document.getElementById('sendMessage');
+alert(new Date());
 if ('serviceWorker' in navigator) {
   console.log('Service Worker is supported');
   navigator.serviceWorker.register('sw.js').then(function() {
