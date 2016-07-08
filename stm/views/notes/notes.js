@@ -85,7 +85,7 @@ angular.module('stm.notes', ['ngRoute'])
       }
       // alert($scope.interim_transcript);
       $scope.final_transcript = $scope.interim_transcript;
-      $scope.$apply();
+      // $scope.$apply();
       // $scope.final_transcript = capitalize(final_transcript);
       // final_transcript = capitalize(final_transcript);
       // final_span.innerHTML = linebreak(final_transcript);
