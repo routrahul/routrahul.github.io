@@ -25,9 +25,17 @@
             Select
           </a>
   			</div>
+        <div class="list-group-item newItem" ng-show="addNewItem">
+  				<label><input type="text" class="inputText" ng-model="title"></input></label>
+  				<h4 class="list-group-item-heading" style="width:65%;"><input class="inputText newWidth" type="text" ng-model="text"></input></h4>
+          <a class="btn btn-default pull-right" ng-class="{active: item.selected}" href="" style="margin-top:-40px;" ng-model="item.selected" ng-click="addItem()">
+            <i class="fa fa-check"></i>
+            Done
+          </a>
+  			</div>
       </div>
       <div class="panel-footer">
-				<small class="pull-left" ng-click="add()"><button class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-plus-sign"></span></button></small>
+				<small class="pull-left" ng-click="newItemAddition()"><button class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-plus-sign"></span></button></small>
 			</div>
     </div>
   </div>

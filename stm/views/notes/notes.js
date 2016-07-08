@@ -18,16 +18,17 @@ angular.module('stm.notes', ['ngRoute'])
       $location.path("/landing");
     }
 
-    $scope.startSpeech = function(){
-      $scope.speechStart = true;
-      recognition.start();
-    }
+    $scope.speech = function(){
+      if($scope.speechStart)
+      {
+        recognition.stop();
+        $scope.speechStart = false;
+        return;
+      }else{
+        $scope.speechStart = true;
+        recognition.start();
+      }
 
-    $scope.endSpeech = function(){
-      recognition.stop();
-      $scope.speechStart = false;
-      alert($scope.final_transcript);
-      return;
     }
 
     var recognition = new webkitSpeechRecognition();
@@ -65,12 +66,32 @@ angular.module('stm.notes', ['ngRoute'])
     };
 
     recognition.onend = function() {
-      //alert($scope.final_transcript);
-      // if($scope.final_transcript)
-      // {
-      //   $scope.speech();
+      if($scope.final_transcript)
+      {
+        console.log($scope.final_transcript);
+        $scope.speech();
+      }
+      // recognizing = false;
+      // if (ignore_onend) {
+      //   return;
       // }
-      // $scope.$apply();
+      // start_img.src = 'mic.gif';
+      // if (!final_transcript) {
+      //   showInfo('info_start');
+      //   return;
+      // }
+      // showInfo('');
+      // if (window.getSelection) {
+      //   window.getSelection().removeAllRanges();
+      //   var range = document.createRange();
+      //   range.selectNode(document.getElementById('final_span'));
+      //   window.getSelection().addRange(range);
+      // }
+      // if (create_email) {
+      //   create_email = false;
+      //   createEmail();
+      // }
+      // console.log(event);
     };
 
     recognition.onresult = function(event) {
@@ -83,7 +104,6 @@ angular.module('stm.notes', ['ngRoute'])
           $scope.interim_transcript += event.results[i][0].transcript;
         }
       }
-      // alert($scope.interim_transcript);
       $scope.final_transcript = $scope.interim_transcript;
       $scope.$apply();
       // $scope.final_transcript = capitalize(final_transcript);
