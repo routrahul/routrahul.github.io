@@ -57,7 +57,7 @@ function subscribe() {
 }
 function unsubscribe() {
   sub.unsubscribe().then(function(event) {
-    subscribeButton.textContent = 'Subscribe';
+    // subscribeButton.textContent = 'Subscribe';
     console.log('Unsubscribed!', event);
     isSubscribed = false;
     $(subscribeButton).removeClass("btn-success").addClass("btn-danger")
