@@ -66,11 +66,11 @@ angular.module('stm.notes', ['ngRoute'])
 
     recognition.onend = function() {
       //alert($scope.final_transcript);
-      if($scope.final_transcript)
-      {
-        $scope.speech();
-      }
-      $scope.$apply();
+      // if($scope.final_transcript)
+      // {
+      //   $scope.speech();
+      // }
+      // $scope.$apply();
     };
 
     recognition.onresult = function(event) {
