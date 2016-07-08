@@ -5,15 +5,15 @@ var subscriptionId;
 var subscribeButton = document.getElementById('subscribe');
 var sendQueryButton = document.getElementById('sendMessage');
 if ('serviceWorker' in navigator) {
-  console.log('Service Worker is supported');
+  alert('Service Worker is supported');
   navigator.serviceWorker.register('sw.js').then(function() {
     return navigator.serviceWorker.ready;
   }).then(function(serviceWorkerRegistration) {
     reg = serviceWorkerRegistration;
     subscribeButton.disabled = false;
-    console.log('Service Worker is ready :^)', reg);
+    alert('Service Worker is ready :^)', reg);
   }).catch(function(error) {
-    console.log('Service Worker Error :^(', error);
+    alert('Service Worker Error :^(', error);
   });
 }
 subscribeButton.addEventListener('click', function() {
@@ -67,5 +67,5 @@ function unsubscribe() {
 }
 
 function openNotes(){
-  location.replace('/app/index.html#/notes');
+  location.replace('/stm/index.html#/notes');
 }

@@ -175,7 +175,7 @@ var moreAlertsObjectGlobal = [
         "id":"weather1",
         "type":"snow",
         "selected":false,
-        "action":[
+        "actions":[
           {
             "id":"snow_action1",
             "subtext":"Action - 1",
@@ -208,7 +208,7 @@ var moreAlertsObjectGlobal = [
         "id":"weather2",
         "type":"heavysnow",
         "selected":false,
-        "action":[
+        "actions":[
           {
             "id":"heavy_snow_action1",
             "subtext":"Action - 1",
@@ -241,7 +241,7 @@ var moreAlertsObjectGlobal = [
         "id":"weather3",
         "type":"clearsky",
         "selected":false,
-        "action":[
+        "actions":[
           {
             "id":"clear_sky_action1",
             "subtext":"Action - 1",
@@ -280,7 +280,7 @@ var moreAlertsObjectGlobal = [
         "id":"stock1",
         "type":"stockout",
         "selected":false,
-        "action":[
+        "actions":[
           {
             "id":"prince_cd_stock_out",
             "subtext":"Action - 1",
@@ -313,7 +313,7 @@ var moreAlertsObjectGlobal = [
         "id":"stock2",
         "type":"stockout",
         "selected":false,
-        "action":[
+        "actions":[
           {
             "id":"prince_cd_stock_out",
             "subtext":"Action - 1",
@@ -352,7 +352,7 @@ var moreAlertsObjectGlobal = [
         "id":"furnace1",
         "type":"furnace",
         "selected":false,
-        "action":[
+        "actions":[
           {
             "id":"furnace_maintenance_1",
             "subtext":"Action - 1",
@@ -385,7 +385,7 @@ var moreAlertsObjectGlobal = [
         "id":"ventilator1",
         "type":"ventilator",
         "selected":false,
-        "action":[
+        "actions":[
           {
             "id":"ventilator_maintenance_1",
             "subtext":"Action - 1",
@@ -418,7 +418,7 @@ var moreAlertsObjectGlobal = [
         "id":"uv1",
         "type":"uv",
         "selected":false,
-        "action":[
+        "actions":[
           {
             "id":"uv_maintenance_1",
             "subtext":"Action - 2",
