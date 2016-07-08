@@ -66,12 +66,13 @@ angular.module('stm.notes', ['ngRoute'])
     };
 
     recognition.onend = function() {
-      alert($scope.final_transcript);
+      //alert($scope.final_transcript);
       if($scope.final_transcript)
       {
         alert($scope.final_transcript);
         $scope.speech();
       }
+      $scope.$apply();
     };
 
     recognition.onresult = function(event) {
@@ -84,7 +85,7 @@ angular.module('stm.notes', ['ngRoute'])
           $scope.interim_transcript += event.results[i][0].transcript;
         }
       }
-      alert($scope.interim_transcript);
+      // alert($scope.interim_transcript);
       $scope.final_transcript = $scope.interim_transcript;
       $scope.$apply();
       // $scope.final_transcript = capitalize(final_transcript);
