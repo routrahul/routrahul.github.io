@@ -17,6 +17,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 subscribeButton.addEventListener('click', function() {
+  alert("click called");
   if (isSubscribed) {
     unsubscribe();
   } else {
@@ -38,6 +39,7 @@ subscribeButton.addEventListener('click', function() {
 //     })
 //   });
 // });
+
 function subscribe() {
   reg.pushManager.subscribe({userVisibleOnly: true}).
   then(function(pushSubscription){
@@ -46,14 +48,14 @@ function subscribe() {
     $("#sendMessage").show();
     $(subscribeButton).removeClass("btn-danger").addClass("btn-success")
     subscriptionId = sub.endpoint.split("/")[sub.endpoint.split("/").length - 1]
-    //subscribeButton.textContent = 'Unsubscribe';
     isSubscribed = true;
     initiateMessages();
   }).catch(function(ex){
-    console.log(ex);
+    alert(ex);
     $(".output").html(ex.toString());
   });;
 }
+
 function unsubscribe() {
   sub.unsubscribe().then(function(event) {
     subscribeButton.textContent = 'Subscribe';
@@ -61,7 +63,7 @@ function unsubscribe() {
     isSubscribed = false;
     $(subscribeButton).removeClass("btn-success").addClass("btn-danger")
   }).catch(function(error) {
-    console.log('Error unsubscribing', error);
+    alert('Error unsubscribing', error);
     //subscribeButton.textContent = 'Subscribe';
   });
 }
