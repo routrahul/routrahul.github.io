@@ -5,19 +5,18 @@ var subscriptionId;
 var subscribeButton = document.getElementById('subscribe');
 var sendQueryButton = document.getElementById('sendMessage');
 if ('serviceWorker' in navigator) {
-  alert('Service Worker is supported');
+  console.log('Service Worker is supported');
   navigator.serviceWorker.register('sw.js').then(function() {
     return navigator.serviceWorker.ready;
   }).then(function(serviceWorkerRegistration) {
     reg = serviceWorkerRegistration;
     subscribeButton.disabled = false;
-    alert('Service Worker is ready :^)', reg);
+    console.log('Service Worker is ready :^)', reg);
   }).catch(function(error) {
-    alert('Service Worker Error :^(', error);
+    console.log('Service Worker Error :^(', error);
   });
 }
 subscribeButton.addEventListener('click', function() {
-  alert("click called");
   if (isSubscribed) {
     unsubscribe();
   } else {
@@ -39,35 +38,34 @@ subscribeButton.addEventListener('click', function() {
 //     })
 //   });
 // });
-
 function subscribe() {
   reg.pushManager.subscribe({userVisibleOnly: true}).
   then(function(pushSubscription){
     sub = pushSubscription;
-    alert('Subscribed! Endpoint:', sub.endpoint);
+    console.log('Subscribed! Endpoint:', sub.endpoint);
     $("#sendMessage").show();
     $(subscribeButton).removeClass("btn-danger").addClass("btn-success")
     subscriptionId = sub.endpoint.split("/")[sub.endpoint.split("/").length - 1]
+    //subscribeButton.textContent = 'Unsubscribe';
     isSubscribed = true;
     initiateMessages();
   }).catch(function(ex){
-    alert(ex);
+    console.log(ex);
     $(".output").html(ex.toString());
   });;
 }
-
 function unsubscribe() {
   sub.unsubscribe().then(function(event) {
     subscribeButton.textContent = 'Subscribe';
-    alert('Unsubscribed!', event);
+    console.log('Unsubscribed!', event);
     isSubscribed = false;
     $(subscribeButton).removeClass("btn-success").addClass("btn-danger")
   }).catch(function(error) {
-    alert('Error unsubscribing', error);
+    console.log('Error unsubscribing', error);
     //subscribeButton.textContent = 'Subscribe';
   });
 }
 
 function openNotes(){
-  location.replace('/stm/index.html#/notes');
+  location.replace('/app/index.html#/notes');
 }
