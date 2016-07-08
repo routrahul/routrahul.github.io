@@ -39,7 +39,7 @@ subscribeButton.addEventListener('click', function() {
 //   });
 // });
 function subscribe() {
-  alert("Subscribe Called");
+  // alert("Subscribe Called");
   reg.pushManager.subscribe({userVisibleOnly: true}).
   then(function(pushSubscription){
     sub = pushSubscription;
