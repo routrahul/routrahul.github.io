@@ -24,7 +24,7 @@ function initiateMessages(){
   // },1500);
 
   var intervalObject = setInterval(function(){
-    
+
     var randomnumber = Math.floor(Math.random() * (2 - 0 + 0)) + 0;
     switch (randomnumber) {
       case 0:
@@ -435,10 +435,11 @@ var moreAlertsObjectGlobal = [
 var criticalAlertsObjGlobal = [
   {
     "name":"snow",
-    "header":"Light Snow Expected Tomorrow",
+    "header":"Heavy Snow Expected Tomorrow",
     "date":"Mon 26 April 2016 17:27",
     "icon":"fa-cloud",
     "active":true,
+    "action":true,
     "actions":[
       {
         "subtext":"Action - 1",
@@ -459,10 +460,11 @@ var criticalAlertsObjGlobal = [
   },
   {
     "name":"prince",
-    "header":"Best of Prince CD's going out of stock next week",
+    "header":"Metallica Concert in two days",
     "date":"Mon 26 April 2016 00:01",
     "icon":"fa-music",
     "active":false,
+    "action":false,
     "actions":[
       {
         "subtext":"Action - 1",
@@ -487,6 +489,7 @@ var criticalAlertsObjGlobal = [
     "date":"Mon 26 April 2016 17:27",
     "icon":"fa-bullhorn",
     "active":false,
+    "action":true,
     "actions":[
       {
         "id":"uv_maintenance_1",

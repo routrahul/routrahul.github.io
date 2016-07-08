@@ -1,0 +1,25 @@
+<div class="bootcards-cards">
+  <div class="col-sm-6 col-md-offset-3 bootcardsContainer">
+    <div class="panel panel-default bootcards-summary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Notes</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <textarea style="width:100%;height:400px;" ng-model="final_transcript" placeholder="Your Notes Here"></textarea>
+        </div>
+      </div>
+      <div class="panel-footer">
+				<small class="pull-left" ng-click="save()"><button class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span></button></small>
+        <!-- <small class="pull-right" ng-click="speech()"><button class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-bullhorn"></span></button></small> -->
+
+        <small class="pull-right">
+          <button class="btn btn-sm" style="color:red;">
+            <span class="glyphicon glyphicon-bullhorn" ng-show="!speechStart" ng-click="speech()"></span>
+            <img src="images/mic-animate.gif" ng-show="speechStart" ng-click="speech()" style="width:17px;height:20px;"></img>
+          </button>
+        </small>
+			</div>
+    </div>
+  </div>
+</div>

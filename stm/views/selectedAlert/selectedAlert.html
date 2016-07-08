@@ -1,22 +1,25 @@
 <div class="container bootcards-container" id="main">
   <div class="row">
-  	<div class="col-md-5 col-sm-5 bootcards-list" id="list" data-title="Notes">
+  	<div class="col-md-7 col-sm-12 bootcards-cards col-md-offset-2 bootcards-list" id="list" data-title="Notes">
   		<div class="panel panel-default">
         <div class="panel-heading clearfix">
           <h3 class="panel-title pull-left">Alerts</h3>
         </div>
         <div class="list-group">
           <a class="list-group-item pjax" href="" ng-repeat="item in selectedAlert.alert"
-          ng-class="{active : item.selected == true}" ng-click="selectAlert(item)" ng-show="item.active == true">
+         ng-click="openSnowModal(item)" ng-show="item.active == true">
 						<i class="fa fa-2x pull-left {{item.icon}}"></i>
-						<h4 class="list-group-item-heading">{{item.header}}</h4>
-						<p class="list-group-item-text">{{item.date}}
-						</p>
+						<h4 class="list-group-item-heading">{{item.header}}<span class="actionIdentifier glyphicon glyphicon-chevron-right pull-right"></span></h4>
+						<p class="list-group-item-text">{{item.date}}</p>
+            <p class="list-group-item-thumbs">
+              <span class="glyphicon glyphicon-thumbs-down pull-left"></span>
+              <span class="glyphicon glyphicon-thumbs-up pull-right"></span>
+            </p>
 					</a>
         </div>
       </div>
     </div>
-    <div class="col-md-7 col-sm-7 bootcards-cards" id="listDetails">
+    <!-- <div class="col-md-7 col-sm-7 bootcards-cards" id="listDetails">
       <div class="col-md-12">
   			<div id="activityCard">
   				<div class="panel panel-default">
@@ -61,6 +64,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
   </div>
 </div>

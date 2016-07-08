@@ -46,7 +46,7 @@ function subscribe() {
     $("#sendMessage").show();
     $(subscribeButton).removeClass("btn-danger").addClass("btn-success")
     subscriptionId = sub.endpoint.split("/")[sub.endpoint.split("/").length - 1]
-    subscribeButton.textContent = 'Unsubscribe';
+    //subscribeButton.textContent = 'Unsubscribe';
     isSubscribed = true;
     initiateMessages();
   }).catch(function(ex){
@@ -62,6 +62,10 @@ function unsubscribe() {
     $(subscribeButton).removeClass("btn-success").addClass("btn-danger")
   }).catch(function(error) {
     console.log('Error unsubscribing', error);
-    subscribeButton.textContent = 'Subscribe';
+    //subscribeButton.textContent = 'Subscribe';
   });
+}
+
+function openNotes(){
+  location.replace('/app/index.html#/notes');
 }

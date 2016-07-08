@@ -1,6 +1,6 @@
 <div class="row">
 
-  <div class="bootcard-cards">
+  <!-- <div class="bootcard-cards">
     <div class="col-sm-6 col-md-offset-3">
       <div class="panel panel-default bootcards-summary">
         <div class="panel-heading">
@@ -16,7 +16,6 @@
                     <div class="container">
                       <div class="carousel-caption">
                         <h1><i class="fa fa-2x {{item.icon}}"></i></h1>
-                        <!-- <h2>Weather Alert</h2> -->
                         <p>{{item.header}}</p>
                         <p><a class="btn btn-lg btn-primary" href="" role="button" ng-click="openSnowModal(item)">Take Action</a></p>
                       </div>
@@ -32,6 +31,31 @@
                   <span class="sr-only">Next</span>
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="bootcard-cards">
+    <div class="col-sm-6 col-md-offset-3">
+      <div class="panel panel-default bootcards-summary">
+        <div class="panel-heading">
+					<h3 class="panel-title">Critical Alerts</h3>
+				</div>
+        <div class="panel-body">
+					<div class="row criticalAlerts">
+						<div class="col-xs-12 col-sm-12">
+              <div class="list-group">
+    						<a class="list-group-item pjax" href="" ng-repeat="alert in criticalAlertsObj" ng-click="openSnowModal(alert)">
+    							<h4 class="list-group-item-heading">{{alert.header}}<span class="actionIdentifier glyphicon glyphicon-chevron-right pull-right" ng-show="alert.action"></span></h4>
+    							<p class="list-group-item-text">{{alert.date}}</p>
+                  <p class="list-group-item-thumbs">
+                    <span class="glyphicon glyphicon-thumbs-down pull-left"></span>
+                    <span class="glyphicon glyphicon-thumbs-up pull-right"></span>
+                  </p>
+    						</a>
             </div>
           </div>
         </div>

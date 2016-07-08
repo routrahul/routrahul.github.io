@@ -3,7 +3,8 @@ angular.module('storemanager', [
   'stm.landing',
   'stm.action',
   'stm.selectedAlert',
-  'stm.login'
+  'stm.login',
+  'stm.notes'
 ])
 
 .config(['$routeProvider', function ($routeProvider) {

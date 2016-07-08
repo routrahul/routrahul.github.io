@@ -39,23 +39,10 @@
   <!-- fixed top navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
+        <button id="subscribe" type="button" class="btn btn-danger btn-sm pull-left subcribeButton" style="margin-top:10px;" onclick="openNotes()"><span class="glyphicon glyphicon-pencil"></span></button>
         <a class="navbar-brand no-break-out" title="Customers" href="#/landing">Store Management</a>
-        <!-- <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <a href="/landing" data-pjax="#main" data-title="Customers" <i="" class="fa fa-dashboard">
-                Dashboard
-              </a>
-            </li>
-            <li>
-              <a href="charts.html" data-pjax="#main" data-title="Charts" <i="" class="fa fa-bar-chart-o">
-                Charts
-              </a>
-            </li>
-          </ul>
-        </div> -->
-        <button id="subscribe" type="button" class="btn btn-danger btn-sm pull-right subcribeButton" style="margin-top:10px;" onclick="subscribe()">Notifications OFF</button>
-        <!-- <button id="subscribe" type="button" class="btn btn-danger btn-sm pull-right subcribeButton" style="margin-top:10px;" onclick="sendMessage()">Send Message</button> -->
+
+        <button id="subscribe" type="button" class="btn btn-danger btn-sm pull-right subcribeButton" style="margin-top:10px;" onclick="subscribe()"><span class="glyphicon glyphicon-bell"></span></button>
       </div>
     </div>
 
@@ -78,6 +65,7 @@
     <script src="views/action/action.js"></script>
     <script src="views/selectedAlert/selectedAlert.js"></script>
     <script src="views/login/login.js"></script>
+    <script src="views/notes/notes.js"></script>
 
     <script src="app.js"></script>
 

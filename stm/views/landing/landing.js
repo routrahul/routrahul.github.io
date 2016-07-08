@@ -24,10 +24,12 @@ angular.module('stm.landing', ['ngRoute'])
       $scope.openSnowModal = function(obj)
       {
         console.log(obj);
-        $scope.modalSelectedObject = obj;
-        ActionFactory.setSelectedAlert(obj);
-        $location.path("/action");
-      //  $("#snowModal").modal();
+        if(obj.action){
+          $scope.modalSelectedObject = obj;
+          ActionFactory.setSelectedAlert(obj);
+          $location.path("/action");
+        }
+
       }
 
       $scope.moreAlertsSelectedObject = function(obj)
@@ -39,6 +41,7 @@ angular.module('stm.landing', ['ngRoute'])
       }
 
       $scope.moreAlertsObject = moreAlertsObjectGlobal;
-
       $scope.criticalAlertsObj = criticalAlertsObjGlobal;
+
+
 }])
