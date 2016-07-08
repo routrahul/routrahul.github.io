@@ -67,5 +67,5 @@ function unsubscribe() {
 }
 
 function openNotes(){
-  location.replace('/stm/index.html#/notes');
+  location.replace('/app/index.html#/notes');
 }

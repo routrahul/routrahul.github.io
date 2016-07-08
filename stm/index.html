@@ -35,19 +35,29 @@
 </head>
 
 <body ng-app="storemanager">
+
   <!-- fixed top navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <button id="subscribe" type="button" class="btn btn-danger btn-sm pull-left subcribeButton" style="margin-top:10px;" onclick="openNotes()"><span class="glyphicon glyphicon-pencil"></span></button>
         <a class="navbar-brand no-break-out" title="Customers" href="#/landing">Store Management</a>
+
         <button id="subscribe" type="button" class="btn btn-danger btn-sm pull-right subcribeButton" style="margin-top:10px;" onclick="subscribe()"><span class="glyphicon glyphicon-bell"></span></button>
       </div>
     </div>
+
     <!-- Page Content -->
     <div class="container bootcards-container" id="main">
+
         <div ng-view></div>
+
     </div>
+
+
     <!-- /.container -->
+
+
+
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
 
