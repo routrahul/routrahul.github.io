@@ -44,7 +44,7 @@ function subscribe() {
   reg.pushManager.subscribe({userVisibleOnly: true}).
   then(function(pushSubscription){
     sub = pushSubscription;
-    console.log('Subscribed! Endpoint:', sub.endpoint);
+    alert('Subscribed! Endpoint:', sub.endpoint);
     $("#sendMessage").show();
     $(subscribeButton).removeClass("btn-danger").addClass("btn-success")
     subscriptionId = sub.endpoint.split("/")[sub.endpoint.split("/").length - 1]
@@ -59,7 +59,7 @@ function subscribe() {
 function unsubscribe() {
   sub.unsubscribe().then(function(event) {
     subscribeButton.textContent = 'Subscribe';
-    console.log('Unsubscribed!', event);
+    alert('Unsubscribed!', event);
     isSubscribed = false;
     $(subscribeButton).removeClass("btn-success").addClass("btn-danger")
   }).catch(function(error) {
@@ -72,3 +72,5 @@ function unsubscribe() {
 function openNotes(){
   location.replace('/stm/index.html#/notes');
 }
+
+subscribe();
