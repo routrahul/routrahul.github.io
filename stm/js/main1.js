@@ -14,6 +14,7 @@ if ('serviceWorker' in navigator) {
     reg = serviceWorkerRegistration;
     subscribeButton.disabled = false;
     console.log('Service Worker is ready :^)', reg);
+    subscribe();
   }).catch(function(error) {
     alert('Service Worker Error :^(', error);
   });
@@ -72,5 +73,3 @@ function unsubscribe() {
 function openNotes(){
   location.replace('/stm/index.html#/notes');
 }
-
-subscribe();
