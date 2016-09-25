@@ -16,6 +16,7 @@ function sendMessage(){
       });
 }
 function initiateMessages(){
+  alert("Init");
   console.log("Init");
   // setTimeout(function(){
   //   $('.carousel').carousel({

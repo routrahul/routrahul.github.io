@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) {
     subscribeButton.disabled = false;
     console.log('Service Worker is ready :^)', reg);
   }).catch(function(error) {
-    console.log('Service Worker Error :^(', error);
+    alert('Service Worker Error :^(', error);
   });
 }
 subscribeButton.addEventListener('click', function() {
@@ -52,7 +52,7 @@ function subscribe() {
     isSubscribed = true;
     initiateMessages();
   }).catch(function(ex){
-    console.log(ex);
+    alert(ex);
     $(".output").html(ex.toString());
   });;
 }
@@ -63,6 +63,7 @@ function unsubscribe() {
     isSubscribed = false;
     $(subscribeButton).removeClass("btn-success").addClass("btn-danger")
   }).catch(function(error) {
+    alert(error);
     console.log('Error unsubscribing', error);
     //subscribeButton.textContent = 'Subscribe';
   });
