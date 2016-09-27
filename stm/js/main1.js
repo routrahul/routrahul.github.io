@@ -5,9 +5,8 @@ var isSubscribed = false;
 var subscriptionId;
 var subscribeButton = document.getElementById('subscribe');
 var sendQueryButton = document.getElementById('sendMessage');
-//alert(new Date());
 if ('serviceWorker' in navigator) {
-  alert('Service Worker is supported');
+  console.log('Service Worker is supported');
   navigator.serviceWorker.register('sw.js').then(function() {
     return navigator.serviceWorker.ready;
   }).then(function(serviceWorkerRegistration) {
@@ -16,7 +15,7 @@ if ('serviceWorker' in navigator) {
     console.log('Service Worker is ready :^)', reg);
     subscribe();
   }).catch(function(error) {
-    alert(error);
+    console.log(error);
   });
 }
 subscribeButton.addEventListener('click', function() {
@@ -45,7 +44,7 @@ function subscribe() {
   reg.pushManager.subscribe({userVisibleOnly: true}).
   then(function(pushSubscription){
     sub = pushSubscription;
-    alert('Subscribed! Endpoint:', sub.endpoint);
+    console.log('Subscribed! Endpoint:', sub.endpoint);
     $("#sendMessage").show();
     $(subscribeButton).removeClass("btn-danger").addClass("btn-success")
     subscriptionId = sub.endpoint.split("/")[sub.endpoint.split("/").length - 1]
@@ -60,7 +59,7 @@ function subscribe() {
 function unsubscribe() {
   sub.unsubscribe().then(function(event) {
     subscribeButton.textContent = 'Subscribe';
-    alert('Unsubscribed!', event);
+    console.log('Unsubscribed!', event);
     isSubscribed = false;
     $(subscribeButton).removeClass("btn-success").addClass("btn-danger")
   }).catch(function(error) {
