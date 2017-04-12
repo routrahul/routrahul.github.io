@@ -7,7 +7,7 @@ function sendMessage(){
         url: "https://android.googleapis.com/gcm/send",
         beforeSend: function (xhr) {
                     /* Authorization header */
-                    xhr.setRequestHeader("Authorization", "key=AIzaSyCH44qhsh-Bv26-nAk8WH0Uyp-isoWkWY4");
+                    xhr.setRequestHeader("Authorization", "key=AIzaSyCNzX_JOxArNIzoB-ooSQdN4TJ1uC7vAiY");
                     xhr.setRequestHeader("Content-Type", "application/json");
                 },
         data: JSON.stringify({
